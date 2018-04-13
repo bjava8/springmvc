@@ -113,9 +113,25 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.7</version>
+			<version>4.12</version>
 			<scope>test</scope>
-		</dependency>        
+		</dependency>
+		
+		<!-- 2018-04-13 Oracle JDBC -->
+		<!-- <dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc6</artifactId>
+			<version>11.1.0.7.0</version>
+		</dependency> -->
+		
+		<!-- https://mvnrepository.com/artifact/com.oracle/ojdbc6 -->
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc6</artifactId>
+			<version>12.1.0.1-atlassian-hosted</version>
+			<scope>test</scope>
+		</dependency>
+		  
 	</dependencies>
     <build>
         <plugins>
@@ -155,4 +171,12 @@
             </plugin>
         </plugins>
     </build>
+    <!-- 2018-04-13  -->
+    <repositories>
+    	<repository>
+    		<id>oracle</id>
+    		<name>ORACLE JDBC Repository</name>
+    		<url>https://maven.atlassian.com/3rdparty/</url>
+    	</repository>
+    </repositories>
 </project>
